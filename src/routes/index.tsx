@@ -604,9 +604,12 @@ function Footer() {
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-6 py-14">
         <div className="flex flex-wrap items-end justify-between gap-10">
-          <div>
-            <div className="font-display text-3xl tracking-tight">Digital Edu Store</div>
-            <p className="mt-2 max-w-sm text-sm text-muted-foreground">
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <img src={logoAsset.url} alt="Digital Edu Store Logo" className="h-8 w-8 rounded-lg shadow-sm" />
+              <div className="font-display text-3xl tracking-tight">Digital Edu Store</div>
+            </div>
+            <p className="mt-1 max-w-sm text-sm text-muted-foreground">
               Premium learning access for Sri Lankan students and professionals.
             </p>
           </div>
