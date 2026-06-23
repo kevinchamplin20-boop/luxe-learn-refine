@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import educationHero from "../assets/education-hero.jpg";
+import educationHeroAvif from "../assets/education-hero.jpg?w=480;800;1200&format=avif&as=srcset";
+import educationHeroWebp from "../assets/education-hero.jpg?w=480;800;1200&format=webp&as=srcset";
+import educationHeroFallback from "../assets/education-hero.jpg?w=800&format=jpg";
+import educationHeroPreload from "../assets/education-hero.jpg?w=800&format=webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
