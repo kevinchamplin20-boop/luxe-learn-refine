@@ -4,6 +4,7 @@ import educationHeroAvif from "../assets/education-hero.jpg?w=480;800;1200&forma
 import educationHeroWebp from "../assets/education-hero.jpg?w=480;800;1200&format=webp&as=srcset";
 import educationHeroFallback from "../assets/education-hero.jpg?w=800&format=jpg";
 import educationHeroPreload from "../assets/education-hero.jpg?w=800&format=webp";
+import logoAsset from "../assets/logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,7 +53,8 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <a href="#" className="flex items-baseline gap-2">
+        <a href="#" className="flex items-center gap-3">
+          <img src={logoAsset.url} alt="Digital Edu Store Logo" className="h-8 w-8 rounded-lg shadow-sm" />
           <span className="font-display text-2xl tracking-tight">Digital Edu Store</span>
           <span className="hidden text-xs text-muted-foreground sm:inline">— Colombo</span>
         </a>
@@ -602,9 +604,12 @@ function Footer() {
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-6 py-14">
         <div className="flex flex-wrap items-end justify-between gap-10">
-          <div>
-            <div className="font-display text-3xl tracking-tight">Digital Edu Store</div>
-            <p className="mt-2 max-w-sm text-sm text-muted-foreground">
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <img src={logoAsset.url} alt="Digital Edu Store Logo" className="h-8 w-8 rounded-lg shadow-sm" />
+              <div className="font-display text-3xl tracking-tight">Digital Edu Store</div>
+            </div>
+            <p className="mt-1 max-w-sm text-sm text-muted-foreground">
               Premium learning access for Sri Lankan students and professionals.
             </p>
           </div>
