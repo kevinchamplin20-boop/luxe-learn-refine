@@ -53,7 +53,8 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <a href="#" className="flex items-baseline gap-2">
+        <a href="#" className="flex items-center gap-3">
+          <img src={logoAsset.url} alt="Digital Edu Store Logo" className="h-8 w-8 rounded-lg shadow-sm" />
           <span className="font-display text-2xl tracking-tight">Digital Edu Store</span>
           <span className="hidden text-xs text-muted-foreground sm:inline">— Colombo</span>
         </a>
