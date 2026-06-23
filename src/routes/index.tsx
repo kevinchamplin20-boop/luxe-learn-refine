@@ -115,18 +115,25 @@ function Hero() {
           </div>
 
           <div className="relative lg:col-span-5">
-            <div className="relative aspect-square overflow-hidden rounded-2xl border border-border/80 bg-surface shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
-              <img
-                src={educationHero}
-                alt="Premium modern workspace representing world-class educational learning"
-                className="h-full w-full object-cover object-center"
-                width={1024}
-                height={1024}
-              />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border/80 bg-surface shadow-2xl transition-transform duration-500 hover:scale-[1.02] sm:aspect-square">
+              <picture>
+                <source type="image/avif" srcSet={educationHeroAvif} sizes="(min-width: 1024px) 40vw, (min-width: 640px) 80vw, 100vw" />
+                <source type="image/webp" srcSet={educationHeroWebp} sizes="(min-width: 1024px) 40vw, (min-width: 640px) 80vw, 100vw" />
+                <img
+                  src={educationHeroFallback}
+                  alt="Premium modern workspace representing world-class educational learning"
+                  className="h-full w-full object-cover object-center"
+                  width={1024}
+                  height={1024}
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </picture>
             </div>
-            <div className="absolute -right-4 -bottom-4 -z-10 h-full w-full rounded-2xl border border-border/40 bg-surface/40 backdrop-blur-sm" />
+            <div className="pointer-events-none absolute -right-4 -bottom-4 -z-10 hidden h-full w-full rounded-2xl border border-border/40 bg-surface/40 backdrop-blur-sm sm:block" />
           </div>
         </div>
+
 
         <div className="mt-24 grid grid-cols-2 gap-x-10 gap-y-6 border-t border-border pt-10 sm:grid-cols-4 sm:gap-x-16">
           <Stat n="10,000+" label="Courses & specializations" />
