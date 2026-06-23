@@ -5,6 +5,9 @@ import educationHeroWebp from "../assets/education-hero.jpg?w=480;800;1200&forma
 import educationHeroFallback from "../assets/education-hero.jpg?w=800&format=jpg";
 import educationHeroPreload from "../assets/education-hero.jpg?w=800&format=webp";
 import logoAsset from "../assets/logo.png.asset.json";
+import canvaLogo from "../assets/canva-logo.png.asset.json";
+import linkedinLogo from "../assets/linkedin-logo.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
