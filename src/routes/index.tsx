@@ -336,8 +336,14 @@ function Bonus() {
                 <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
                   {b.tag}
                 </span>
-                <span className="font-display text-sm text-muted-foreground">Bonus</span>
+                <img
+                  src={b.logo}
+                  alt={`${b.name} logo`}
+                  className="h-12 w-12 object-contain"
+                  loading="lazy"
+                />
               </div>
+
               <div className="mt-24">
                 <h3 className="font-display text-4xl tracking-tight sm:text-5xl">{b.name}</h3>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
