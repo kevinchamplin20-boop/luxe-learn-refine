@@ -562,7 +562,7 @@ function FAQ() {
             <h2 className="display-lg mt-5">Questions, answered.</h2>
             <p className="mt-6 text-sm text-muted-foreground">
               Can't find what you need?{" "}
-              <a href={WHATSAPP_URL} onClick={openWhatsApp} target="_blank" rel="noreferrer" className="text-foreground underline underline-offset-4">
+              <a href={WHATSAPP_URL} target="_top" rel="noreferrer" className="text-foreground underline underline-offset-4">
                 Message us on WhatsApp
               </a>
               .
@@ -618,7 +618,7 @@ function Footer() {
             <a href="#bonus" className="hover:text-foreground">Bonus</a>
             <a href="#pricing" className="hover:text-foreground">Pricing</a>
             <a href="#faq" className="hover:text-foreground">FAQ</a>
-            <a href={WHATSAPP_URL} onClick={openWhatsApp} target="_blank" rel="noreferrer" className="hover:text-foreground">
+            <a href={WHATSAPP_URL} target="_top" rel="noreferrer" className="hover:text-foreground">
               WhatsApp
             </a>
           </div>
