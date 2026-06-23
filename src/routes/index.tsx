@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 const WHATSAPP_URL =
   "https://wa.me/94786904949?text=Hi!%20I%27m%20interested%20in%20the%20Premium%20Educational%20Bundle%20for%20LKR%203000.%20Can%20you%20provide%20more%20details%3F";
 
-function openWhatsApp(e: React.MouseEvent<HTMLAnchorElement>) {
+function openWhatsApp(e: MouseEvent<HTMLAnchorElement>) {
   e.preventDefault();
   try {
     const win = window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer");
