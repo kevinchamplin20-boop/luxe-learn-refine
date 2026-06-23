@@ -20,6 +20,9 @@ export const Route = createFileRoute("/")({
         content: "1-Year Coursera Plus for LKR 3,000. Bonus Canva Edu Pro + LinkedIn Career Premium.",
       },
     ],
+    links: [
+      { rel: "preload", as: "image", href: educationHeroPreload, type: "image/webp", fetchpriority: "high" } as never,
+    ],
   }),
   component: Index,
 });
