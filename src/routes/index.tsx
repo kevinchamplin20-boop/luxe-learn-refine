@@ -5,6 +5,9 @@ import educationHeroWebp from "../assets/education-hero.jpg?w=480;800;1200&forma
 import educationHeroFallback from "../assets/education-hero.jpg?w=800&format=jpg";
 import educationHeroPreload from "../assets/education-hero.jpg?w=800&format=webp";
 import logoAsset from "../assets/logo.png.asset.json";
+import canvaLogo from "../assets/canva-logo.png.asset.json";
+import linkedinLogo from "../assets/linkedin-logo.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -285,6 +288,9 @@ function Categories() {
   );
 }
 
+
+
+
 const BONUSES = [
   {
     name: "Canva Edu Pro",
@@ -292,6 +298,7 @@ const BONUSES = [
     value: "LKR 15,000",
     body: "Full Canva Pro on an education licence — premium templates, brand kits, background remover, and Magic Studio.",
     tag: "Design",
+    logo: canvaLogo.url,
   },
   {
     name: "LinkedIn Career Premium",
@@ -299,8 +306,10 @@ const BONUSES = [
     value: "LKR 12,000",
     body: "Featured applicant on every job, InMail credits, salary insights, and full LinkedIn Learning library.",
     tag: "Career",
+    logo: linkedinLogo.url,
   },
 ];
+
 
 function Bonus() {
   return (
@@ -327,8 +336,14 @@ function Bonus() {
                 <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
                   {b.tag}
                 </span>
-                <span className="font-display text-sm text-muted-foreground">Bonus</span>
+                <img
+                  src={b.logo}
+                  alt={`${b.name} logo`}
+                  className="h-12 w-12 object-contain"
+                  loading="lazy"
+                />
               </div>
+
               <div className="mt-24">
                 <h3 className="font-display text-4xl tracking-tight sm:text-5xl">{b.name}</h3>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
