@@ -52,11 +52,11 @@ function Index() {
 function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        <a href="#" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="Digital Edu Store Logo" className="h-8 w-8 rounded-lg shadow-sm" />
-          <span className="font-display text-2xl tracking-tight">Digital Edu Store</span>
-          <span className="hidden text-xs text-muted-foreground sm:inline">— Colombo</span>
+      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-4 sm:flex sm:justify-between sm:px-6 sm:py-5">
+        <a href="#" className="flex min-w-0 items-center gap-2 sm:gap-3">
+          <img src={logoAsset.url} alt="Digital Edu Store Logo" className="h-7 w-7 shrink-0 rounded-lg shadow-sm sm:h-8 sm:w-8" />
+          <span className="truncate font-display text-xl tracking-tight sm:text-2xl">Digital Edu Store</span>
+          <span className="hidden shrink-0 text-xs text-muted-foreground sm:inline">— Colombo</span>
         </a>
         <nav className="hidden items-center gap-9 text-sm text-muted-foreground sm:flex">
           <a href="#features" className="transition hover:text-foreground">Features</a>
@@ -68,7 +68,7 @@ function Nav() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noreferrer"
-          className="rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition hover:bg-foreground/90"
+          className="shrink-0 rounded-full bg-foreground px-4 py-2 text-xs font-medium text-background transition hover:bg-foreground/90 sm:px-5 sm:py-2.5 sm:text-sm"
         >
           Get access
         </a>
