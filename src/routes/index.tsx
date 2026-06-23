@@ -285,6 +285,9 @@ function Categories() {
   );
 }
 
+import canvaLogo from "@/assets/canva-logo.png.asset.json";
+import linkedinLogo from "@/assets/linkedin-logo.png.asset.json";
+
 const BONUSES = [
   {
     name: "Canva Edu Pro",
@@ -292,6 +295,7 @@ const BONUSES = [
     value: "LKR 15,000",
     body: "Full Canva Pro on an education licence — premium templates, brand kits, background remover, and Magic Studio.",
     tag: "Design",
+    logo: canvaLogo.url,
   },
   {
     name: "LinkedIn Career Premium",
@@ -299,8 +303,10 @@ const BONUSES = [
     value: "LKR 12,000",
     body: "Featured applicant on every job, InMail credits, salary insights, and full LinkedIn Learning library.",
     tag: "Career",
+    logo: linkedinLogo.url,
   },
 ];
+
 
 function Bonus() {
   return (
