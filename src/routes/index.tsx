@@ -97,8 +97,8 @@ function Hero() {
 
             <div className="mt-12 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
               <a
-                href={WHATSAPP_URL} onClick={openWhatsApp}
-                target="_blank"
+                href={WHATSAPP_URL}
+                target="_top"
                 rel="noreferrer"
                 className="group inline-flex items-center gap-3 rounded-full bg-foreground px-7 py-4 text-sm font-medium text-background transition hover:bg-foreground/90"
               >
@@ -420,8 +420,8 @@ function Pricing() {
               </div>
 
               <a
-                href={WHATSAPP_URL} onClick={openWhatsApp}
-                target="_blank"
+                href={WHATSAPP_URL}
+                target="_top"
                 rel="noreferrer"
                 className="mt-8 flex items-center justify-center gap-3 rounded-full bg-foreground py-4 text-sm font-medium text-background transition hover:bg-foreground/90"
               >
@@ -509,8 +509,8 @@ function ContactCTA() {
             <div className="mt-3 font-display text-4xl tracking-tight">Instant Support</div>
             <div className="mt-2 text-sm text-muted-foreground">Available 24 / 7 — Colombo, Sri Lanka</div>
             <a
-              href={WHATSAPP_URL} onClick={openWhatsApp}
-              target="_blank"
+              href={WHATSAPP_URL}
+              target="_top"
               rel="noreferrer"
               className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-primary py-4 text-sm font-medium text-primary-foreground transition hover:opacity-90"
             >
