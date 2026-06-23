@@ -625,7 +625,7 @@ function Footer() {
         </div>
         <div className="mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground">
           <span>© {new Date().getFullYear()} Digital Edu Store. All rights reserved.</span>
-          <span>Colombo, Sri Lanka · +94 78 690 4949</span>
+          <span>Colombo, Sri Lanka</span>
         </div>
       </div>
     </footer>
