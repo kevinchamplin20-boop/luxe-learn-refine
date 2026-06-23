@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import educationHeroAvif from "../assets/education-hero.jpg?w=480;800;1200&format=avif&as=srcset";
 import educationHeroWebp from "../assets/education-hero.jpg?w=480;800;1200&format=webp&as=srcset";
 import educationHeroFallback from "../assets/education-hero.jpg?w=800&format=jpg";
@@ -30,6 +30,25 @@ export const Route = createFileRoute("/")({
 
 const WHATSAPP_URL =
   "https://wa.me/94786904949?text=Hi!%20I%27m%20interested%20in%20the%20Premium%20Educational%20Bundle%20for%20LKR%203000.%20Can%20you%20provide%20more%20details%3F";
+
+function openWhatsApp(e: MouseEvent<HTMLAnchorElement>) {
+  e.preventDefault();
+  try {
+    const win = window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer");
+    if (win) return;
+  } catch {
+    // fall through to top-level navigation
+  }
+  try {
+    if (window.top) {
+      window.top.location.href = WHATSAPP_URL;
+      return;
+    }
+  } catch {
+    // cross-origin top access blocked — fall through
+  }
+  window.location.href = WHATSAPP_URL;
+}
 
 function Index() {
   return (
@@ -65,7 +84,7 @@ function Nav() {
           <a href="#faq" className="transition hover:text-foreground">FAQ</a>
         </nav>
         <a
-          href={WHATSAPP_URL}
+          href={WHATSAPP_URL} onClick={openWhatsApp}
           target="_blank"
           rel="noreferrer"
           className="shrink-0 rounded-full bg-foreground px-4 py-2 text-xs font-medium text-background transition hover:bg-foreground/90 sm:px-5 sm:py-2.5 sm:text-sm"
@@ -97,7 +116,7 @@ function Hero() {
 
             <div className="mt-12 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
               <a
-                href={WHATSAPP_URL}
+                href={WHATSAPP_URL} onClick={openWhatsApp}
                 target="_blank"
                 rel="noreferrer"
                 className="group inline-flex items-center gap-3 rounded-full bg-foreground px-7 py-4 text-sm font-medium text-background transition hover:bg-foreground/90"
@@ -420,7 +439,7 @@ function Pricing() {
               </div>
 
               <a
-                href={WHATSAPP_URL}
+                href={WHATSAPP_URL} onClick={openWhatsApp}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 flex items-center justify-center gap-3 rounded-full bg-foreground py-4 text-sm font-medium text-background transition hover:bg-foreground/90"
@@ -509,7 +528,7 @@ function ContactCTA() {
             <div className="mt-3 font-display text-4xl tracking-tight">Instant Support</div>
             <div className="mt-2 text-sm text-muted-foreground">Available 24 / 7 — Colombo, Sri Lanka</div>
             <a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_URL} onClick={openWhatsApp}
               target="_blank"
               rel="noreferrer"
               className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-primary py-4 text-sm font-medium text-primary-foreground transition hover:opacity-90"
@@ -562,7 +581,7 @@ function FAQ() {
             <h2 className="display-lg mt-5">Questions, answered.</h2>
             <p className="mt-6 text-sm text-muted-foreground">
               Can't find what you need?{" "}
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="text-foreground underline underline-offset-4">
+              <a href={WHATSAPP_URL} onClick={openWhatsApp} target="_blank" rel="noreferrer" className="text-foreground underline underline-offset-4">
                 Message us on WhatsApp
               </a>
               .
@@ -618,7 +637,7 @@ function Footer() {
             <a href="#bonus" className="hover:text-foreground">Bonus</a>
             <a href="#pricing" className="hover:text-foreground">Pricing</a>
             <a href="#faq" className="hover:text-foreground">FAQ</a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-foreground">
+            <a href={WHATSAPP_URL} onClick={openWhatsApp} target="_blank" rel="noreferrer" className="hover:text-foreground">
               WhatsApp
             </a>
           </div>
