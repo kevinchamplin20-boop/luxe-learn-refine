@@ -506,7 +506,7 @@ function ContactCTA() {
           </div>
           <div className="rounded-3xl border border-border bg-background p-10">
             <div className="eyebrow">WhatsApp</div>
-            <div className="mt-3 font-display text-4xl tracking-tight">+94 78 690 4949</div>
+            <div className="mt-3 font-display text-4xl tracking-tight">Instant Support</div>
             <div className="mt-2 text-sm text-muted-foreground">Available 24 / 7 — Colombo, Sri Lanka</div>
             <a
               href={WHATSAPP_URL}
