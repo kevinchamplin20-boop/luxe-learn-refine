@@ -506,7 +506,7 @@ function ContactCTA() {
           </div>
           <div className="rounded-3xl border border-border bg-background p-10">
             <div className="eyebrow">WhatsApp</div>
-            <div className="mt-3 font-display text-4xl tracking-tight">+94 78 690 4949</div>
+            <div className="mt-3 font-display text-4xl tracking-tight">Instant Support</div>
             <div className="mt-2 text-sm text-muted-foreground">Available 24 / 7 — Colombo, Sri Lanka</div>
             <a
               href={WHATSAPP_URL}
@@ -625,7 +625,7 @@ function Footer() {
         </div>
         <div className="mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground">
           <span>© {new Date().getFullYear()} Digital Edu Store. All rights reserved.</span>
-          <span>Colombo, Sri Lanka · +94 78 690 4949</span>
+          <span>Colombo, Sri Lanka</span>
         </div>
       </div>
     </footer>
