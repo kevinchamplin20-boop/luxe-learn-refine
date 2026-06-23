@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import educationHero from "../assets/education-hero.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -72,39 +73,55 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 pt-24 pb-20 sm:pt-32 sm:pb-28">
-        <div className="max-w-5xl">
-          <p className="eyebrow mb-8">Premium Educational Bundle · 2026 Edition</p>
-          <h1 className="display-xl">
-            A year of <em className="italic text-primary">world-class</em>
-            <br />
-            learning, in one paper-thin price.
-          </h1>
-          <p className="mt-10 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            1-Year Coursera Plus access — 10,000+ courses from Stanford, Yale, Google and IBM —
-            delivered to your personal account in minutes. Includes two premium bonuses worth
-            LKR 27,000.
-          </p>
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <p className="eyebrow mb-8">Premium Educational Bundle · 2026 Edition</p>
+            <h1 className="display-xl text-balance">
+              A year of <em className="italic text-primary">world-class</em>
+              <br />
+              learning, in one paper-thin price.
+            </h1>
+            <p className="mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
+              1-Year Coursera Plus access — 10,000+ courses from Stanford, Yale, Google and IBM —
+              delivered to your personal account in minutes. Includes two premium bonuses worth
+              LKR 27,000.
+            </p>
 
-          <div className="mt-12 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center gap-3 rounded-full bg-foreground px-7 py-4 text-sm font-medium text-background transition hover:bg-foreground/90"
-            >
-              Start on WhatsApp
-              <span className="transition group-hover:translate-x-0.5">→</span>
-            </a>
-            <a
-              href="#pricing"
-              className="inline-flex items-center gap-2 text-sm font-medium text-foreground underline-offset-4 hover:underline"
-            >
-              See what's included
-            </a>
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
+            <div className="mt-12 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex items-center gap-3 rounded-full bg-foreground px-7 py-4 text-sm font-medium text-background transition hover:bg-foreground/90"
+              >
+                Start on WhatsApp
+                <span className="transition group-hover:translate-x-0.5">→</span>
+              </a>
+              <a
+                href="#pricing"
+                className="inline-flex items-center gap-2 text-sm font-medium text-foreground underline-offset-4 hover:underline"
+              >
+                See what's included
+              </a>
+            </div>
+
+            <div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               Instant delivery · LKR 3,000 one-time
             </div>
+          </div>
+
+          <div className="relative lg:col-span-5">
+            <div className="relative aspect-square overflow-hidden rounded-2xl border border-border/80 bg-surface shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
+              <img
+                src={educationHero}
+                alt="Premium modern workspace representing world-class educational learning"
+                className="h-full w-full object-cover object-center"
+                width={1024}
+                height={1024}
+              />
+            </div>
+            <div className="absolute -right-4 -bottom-4 -z-10 h-full w-full rounded-2xl border border-border/40 bg-surface/40 backdrop-blur-sm" />
           </div>
         </div>
 
