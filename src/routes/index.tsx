@@ -285,8 +285,8 @@ function Categories() {
   );
 }
 
-import canvaLogo from "@/assets/canva-logo.png.asset.json";
-import linkedinLogo from "@/assets/linkedin-logo.png.asset.json";
+
+
 
 const BONUSES = [
   {
