@@ -4,6 +4,7 @@ import educationHeroAvif from "../assets/education-hero.jpg?w=480;800;1200&forma
 import educationHeroWebp from "../assets/education-hero.jpg?w=480;800;1200&format=webp&as=srcset";
 import educationHeroFallback from "../assets/education-hero.jpg?w=800&format=jpg";
 import educationHeroPreload from "../assets/education-hero.jpg?w=800&format=webp";
+import logoAsset from "../assets/logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
