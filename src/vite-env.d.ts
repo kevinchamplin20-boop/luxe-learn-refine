@@ -1,14 +1,14 @@
 /// <reference types="vite-imagetools/client" />
 
-declare module "*.jpg?*" {
+declare module "*&as=srcset" {
   const src: string;
   export default src;
 }
-declare module "*.png?*" {
+declare module "*&format=jpg" {
   const src: string;
   export default src;
 }
-declare module "*.jpeg?*" {
+declare module "*&format=webp" {
   const src: string;
   export default src;
 }
