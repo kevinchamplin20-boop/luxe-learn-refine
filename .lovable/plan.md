@@ -1,10 +1,9 @@
-To deploy your TanStack Start application on Netlify, we need to configure Nitro (the underlying server engine for TanStack Start) to build with the `netlify` preset.
+# Plan - Fix Netlify Deploy
 
-We will:
-1. Create a `netlify.toml` file at the root of the project to pre-configure the build commands, publish directories, and redirection rules for Netlify.
-2. Ensure Netlify knows to use the `netlify` preset by defining it in the build settings.
+We will update the Netlify configuration file (`netlify.toml`) to point to the correct publish directory (`dist/client` or `dist`), ensuring that Netlify can locate the built client assets after running the build command.
 
-### Manual Steps for Netlify Dashboard:
-- **Build command:** `bun run build` (or `npm run build`)
-- **Publish directory:** `.netlify/dist`
-- **Environment variables:** Add `NITRO_PRESET=netlify` to your Netlify site settings.
+## Steps
+1. **Update `netlify.toml`**:
+   - Change the `publish` directory to `"dist/client"`.
+   - Keep the build command as `npm run build`.
+   - Maintain the `NITRO_PRESET = "netlify"` environment variable.
