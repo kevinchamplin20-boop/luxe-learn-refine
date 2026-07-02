@@ -168,7 +168,7 @@ function Nav() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-4 sm:flex sm:justify-between sm:px-6 sm:py-5">
         <a href="#" className="flex min-w-0 items-center gap-2 sm:gap-3">
-          <img src={logoAsset.url} alt="Digital Edu Store Logo" className="h-7 w-7 shrink-0 rounded-lg shadow-sm sm:h-8 sm:w-8" />
+          <img src={logoAsset.url} alt="Digital Edu Store Logo" width={32} height={32} className="h-7 w-7 shrink-0 rounded-lg shadow-sm sm:h-8 sm:w-8" />
           <span className="truncate font-display text-xl tracking-tight sm:text-2xl">Digital Edu Store</span>
           <span className="hidden shrink-0 text-xs text-muted-foreground sm:inline">— Colombo</span>
         </a>
@@ -450,6 +450,8 @@ function Bonus() {
                 <img
                   src={b.logo}
                   alt={`${b.name} logo`}
+                  width={48}
+                  height={48}
                   className="h-12 w-12 object-contain"
                   loading="lazy"
                 />
@@ -710,7 +712,7 @@ function Footer() {
         <div className="flex flex-wrap items-end justify-between gap-10">
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
-              <img src={logoAsset.url} alt="Digital Edu Store Logo" className="h-8 w-8 rounded-lg shadow-sm" />
+              <img src={logoAsset.url} alt="Digital Edu Store Logo" width={32} height={32} className="h-8 w-8 rounded-lg shadow-sm" />
               <div className="font-display text-3xl tracking-tight">Digital Edu Store</div>
             </div>
             <p className="mt-1 max-w-sm text-sm text-muted-foreground">
