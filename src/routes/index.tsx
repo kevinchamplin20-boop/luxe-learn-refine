@@ -654,28 +654,6 @@ function ContactCTA() {
   );
 }
 
-const FAQS = [
-  {
-    q: "Are these accounts legitimate?",
-    a: "Yes. We provide fully legitimate educational accounts activated on your own email, with the same access you'd get buying directly from the platform.",
-  },
-  {
-    q: "How quickly will I get access?",
-    a: "Access is instant. Once payment is confirmed on WhatsApp, your Coursera Plus activation and bonus credentials are delivered within minutes.",
-  },
-  {
-    q: "What payment methods do you accept?",
-    a: "Sri Lankan bank transfers, mobile wallets, and other secure local payment methods. We'll share full instructions on WhatsApp.",
-  },
-  {
-    q: "Will I receive actual certificates?",
-    a: "Yes — every course you complete issues a verifiable, shareable certificate directly from Coursera under your name.",
-  },
-  {
-    q: "Can I share the account with friends?",
-    a: "The account is yours alone — it's activated on your personal email for a private, uninterrupted experience.",
-  },
-];
 
 function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
