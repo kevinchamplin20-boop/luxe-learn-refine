@@ -302,7 +302,7 @@ const BONUSES = [
   },
   {
     name: "LinkedIn Career Premium",
-    duration: "3 Months access",
+    duration: "2 Months access",
     value: "LKR 12,000",
     body: "Featured applicant on every job, InMail credits, salary insights, and full LinkedIn Learning library.",
     tag: "Career",
