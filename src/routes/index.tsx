@@ -9,6 +9,31 @@ import canvaLogo from "../assets/canva-logo.png.asset.json";
 import linkedinLogo from "../assets/linkedin-logo.png.asset.json";
 
 
+const SITE_URL = "https://digitaledustore.online";
+
+const FAQS = [
+  {
+    q: "Are these accounts legitimate?",
+    a: "Yes. We provide fully legitimate educational accounts activated on your own email, with the same access you'd get buying directly from the platform.",
+  },
+  {
+    q: "How quickly will I get access?",
+    a: "Access is instant. Once payment is confirmed on WhatsApp, your Coursera Plus activation and bonus credentials are delivered within minutes.",
+  },
+  {
+    q: "What payment methods do you accept?",
+    a: "Sri Lankan bank transfers, mobile wallets, and other secure local payment methods. We'll share full instructions on WhatsApp.",
+  },
+  {
+    q: "Will I receive actual certificates?",
+    a: "Yes — every course you complete issues a verifiable, shareable certificate directly from Coursera under your name.",
+  },
+  {
+    q: "Can I share the account with friends?",
+    a: "The account is yours alone — it's activated on your personal email for a private, uninterrupted experience.",
+  },
+];
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -23,13 +48,96 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "1-Year Coursera Plus for LKR 3,000. Bonus Canva Edu Pro + LinkedIn Career Premium.",
       },
+      { property: "og:url", content: SITE_URL + "/" },
     ],
     links: [
+      { rel: "canonical", href: SITE_URL + "/" },
       { rel: "preload", as: "image", href: educationHeroPreload, type: "image/webp", fetchPriority: "high" } as never,
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": SITE_URL + "/#website",
+              url: SITE_URL + "/",
+              name: "Digital Edu Store",
+              description:
+                "Premium educational bundle: Coursera Plus 1-Year + bonus Canva Edu Pro and LinkedIn Career Premium.",
+            },
+            {
+              "@type": "Organization",
+              "@id": SITE_URL + "/#organization",
+              name: "Digital Edu Store",
+              url: SITE_URL + "/",
+              telephone: "+94 78 690 4949",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Colombo",
+                addressCountry: "LK",
+              },
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": SITE_URL + "/#localbusiness",
+              name: "Digital Edu Store",
+              url: SITE_URL + "/",
+              telephone: "+94 78 690 4949",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Colombo",
+                addressCountry: "LK",
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday",
+                  ],
+                  opens: "00:00",
+                  closes: "23:59",
+                },
+              ],
+            },
+            {
+              "@type": "Product",
+              name: "Premium Educational Bundle",
+              description:
+                "Coursera Plus 1-Year access with bonus Canva Edu Pro and 2-Month LinkedIn Career Premium.",
+              brand: { "@type": "Brand", name: "Digital Edu Store" },
+              offers: {
+                "@type": "Offer",
+                price: "3000",
+                priceCurrency: "LKR",
+                availability: "https://schema.org/InStock",
+                url: SITE_URL + "/",
+              },
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: FAQS.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            },
+          ],
+        }),
+      },
     ],
   }),
   component: Index,
 });
+
 
 const WHATSAPP_URL =
   "https://wa.me/94786904949?text=Hi!%20I%27m%20interested%20in%20the%20Premium%20Educational%20Bundle%20for%20LKR%203000.%20Can%20you%20provide%20more%20details%3F";
@@ -38,17 +146,20 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
       <Nav />
-      <Hero />
-      <Marquee />
-      <Features />
-      <Categories />
-      <Bonus />
-      <Pricing />
-      <Steps />
-      <ContactCTA />
-      <FAQ />
+      <main>
+        <Hero />
+        <Marquee />
+        <Features />
+        <Categories />
+        <Bonus />
+        <Pricing />
+        <Steps />
+        <ContactCTA />
+        <FAQ />
+      </main>
       <Footer />
     </div>
+
   );
 }
 
@@ -543,28 +654,6 @@ function ContactCTA() {
   );
 }
 
-const FAQS = [
-  {
-    q: "Are these accounts legitimate?",
-    a: "Yes. We provide fully legitimate educational accounts activated on your own email, with the same access you'd get buying directly from the platform.",
-  },
-  {
-    q: "How quickly will I get access?",
-    a: "Access is instant. Once payment is confirmed on WhatsApp, your Coursera Plus activation and bonus credentials are delivered within minutes.",
-  },
-  {
-    q: "What payment methods do you accept?",
-    a: "Sri Lankan bank transfers, mobile wallets, and other secure local payment methods. We'll share full instructions on WhatsApp.",
-  },
-  {
-    q: "Will I receive actual certificates?",
-    a: "Yes — every course you complete issues a verifiable, shareable certificate directly from Coursera under your name.",
-  },
-  {
-    q: "Can I share the account with friends?",
-    a: "The account is yours alone — it's activated on your personal email for a private, uninterrupted experience.",
-  },
-];
 
 function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
