@@ -450,6 +450,8 @@ function Bonus() {
                 <img
                   src={b.logo}
                   alt={`${b.name} logo`}
+                  width={48}
+                  height={48}
                   className="h-12 w-12 object-contain"
                   loading="lazy"
                 />
