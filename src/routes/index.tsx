@@ -430,7 +430,7 @@ function Pricing() {
                 <div className="eyebrow">Free bonuses included</div>
                 <div className="mt-3 grid gap-2 text-sm">
                   <div className="flex justify-between"><span>Canva Edu Pro</span><span className="text-muted-foreground">1 Year</span></div>
-                  <div className="flex justify-between"><span>LinkedIn Career Premium</span><span className="text-muted-foreground">3 Months</span></div>
+                  <div className="flex justify-between"><span>LinkedIn Career Premium</span><span className="text-muted-foreground">2 Months</span></div>
                 </div>
               </div>
 
