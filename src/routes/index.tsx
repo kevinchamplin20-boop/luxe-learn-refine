@@ -399,7 +399,7 @@ function Pricing() {
             <div className="mt-10 space-y-3 text-sm text-background/80">
               <Row label="Coursera Plus retail" value="LKR 48,000 / yr" />
               <Row label="Canva Edu Pro retail" value="LKR 15,000 / yr" />
-              <Row label="LinkedIn Premium retail" value="LKR 12,000 / 3mo" />
+              <Row label="LinkedIn Premium retail" value="LKR 12,000 / 2mo" />
               <Row label="Your price today" value="LKR 3,000" strong />
             </div>
           </div>
