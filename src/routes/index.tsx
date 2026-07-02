@@ -399,7 +399,7 @@ function Pricing() {
             <div className="mt-10 space-y-3 text-sm text-background/80">
               <Row label="Coursera Plus retail" value="LKR 48,000 / yr" />
               <Row label="Canva Edu Pro retail" value="LKR 15,000 / yr" />
-              <Row label="LinkedIn Premium retail" value="LKR 12,000 / 3mo" />
+              <Row label="LinkedIn Premium retail" value="LKR 12,000 / 2mo" />
               <Row label="Your price today" value="LKR 3,000" strong />
             </div>
           </div>
@@ -430,7 +430,7 @@ function Pricing() {
                 <div className="eyebrow">Free bonuses included</div>
                 <div className="mt-3 grid gap-2 text-sm">
                   <div className="flex justify-between"><span>Canva Edu Pro</span><span className="text-muted-foreground">1 Year</span></div>
-                  <div className="flex justify-between"><span>LinkedIn Career Premium</span><span className="text-muted-foreground">3 Months</span></div>
+                  <div className="flex justify-between"><span>LinkedIn Career Premium</span><span className="text-muted-foreground">2 Months</span></div>
                 </div>
               </div>
 
